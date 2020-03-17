@@ -105,8 +105,8 @@ out = Dense(1)(fc2)
 model = Model([user_input, anime_input], out)
 model.compile(optimizer='adam', loss='mean_squared_error',metrics=['accuracy',rmse,'mae',f1])
 
-# K - Fold , n_splits is equal to num of rows --> Leave one Out
-kf = KFold(n_splits=num_of_rows, shuffle=False)
+# K - Fold 
+kf = KFold(n_splits=5, shuffle=False)
 accuracy_model = []
 for train_index, test_index in kf.split(user_id):
     # Split train-test
