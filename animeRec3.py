@@ -10,7 +10,7 @@ from statistics import mean
 
 
 
-#  Collaborative filtering,  word Embedding dense vector representation - with binary classification  NeuralNetwork regression model
+#  Collaborative filtering,  word Embedding dense vector representation - NeuralNetwork regression model
 
 
 dataset = pd.read_csv('rating.csv',nrows=2000)
