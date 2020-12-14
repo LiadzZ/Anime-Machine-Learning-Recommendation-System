@@ -103,7 +103,7 @@ fc2 = Dense(32, activation='relu')(fc1)
 out = Dense(1)(fc2)
 #model = Model([user_input, book_input], prod)
 model = Model([user_input, anime_input], out)
-model.compile(optimizer='adam', loss='mean_squared_error',metrics=['accuracy',rmse,'mae',f1])
+model.compile(optimizer='adam', loss='mean_squared_error',metrics=[rmse,'mae',f1])
 
 # K - Fold 
 kf = KFold(n_splits=5, shuffle=False)
