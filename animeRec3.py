@@ -152,8 +152,8 @@ predictions = np.array([a[0] for a in predictions])
 recommended_anime_ids = (-predictions).argsort()[:5]
 print("Top 5:")
 print(recommended_anime_ids , "real ID:" , idx_to_ids)
+animeData=pd.read_csv('anime.csv')
 def realName(id):
-    animeData=pd.read_csv('anime.csv')
     animeData = animeData.loc[animeData['anime_id'] == id]
     name = animeData['name']
     return name
